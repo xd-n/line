@@ -17,6 +17,7 @@ df['Prioritize'] = df['Machines'].apply(lambda x:
                                                 '⭐' if x > 500 else '')))
 
 app = dash.Dash(__name__)
+server = app.server
 
 app.layout = html.Div([
     dash_table.DataTable(
